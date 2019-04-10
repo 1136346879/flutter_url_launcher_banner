@@ -76,7 +76,7 @@ class _BannerState extends State<HomeBanner> {
     }
     return items;
   }
-
+//每一个图片的点击事件
   Widget _buildItem(StoryModel story) {
     return GestureDetector(
       onTap: () { // 按下
@@ -91,7 +91,7 @@ class _BannerState extends State<HomeBanner> {
           _buildItemTitle(story.title), // 内容文字,大意
         ],),);
   }
-
+//图片title
   Widget _buildItemTitle(String title) {
     return Container(
       decoration: BoxDecoration( /// 背景的渐变色
@@ -108,7 +108,7 @@ class _BannerState extends State<HomeBanner> {
           title, style: TextStyle(color: Colors.white, fontSize: 18.0),),),
     );
   }
-
+//指示器显示
   Widget _buildIndicator() {
     List<Widget> indicators = [];
     for (int i = 0; i < widget.bannerStories.length; i++) {
@@ -124,7 +124,7 @@ class _BannerState extends State<HomeBanner> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: indicators);
   }
-
+//页面切换的时候
   _onPageChanged(int index) {
     realIndex = index;
     int count = widget.bannerStories.length;
