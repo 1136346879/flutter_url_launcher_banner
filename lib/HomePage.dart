@@ -4,6 +4,7 @@ import 'package:flutter_app/HomeDetailPage.dart';
 import 'package:flutter_app/Publish.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_app/banner/pagination.dart';
+import 'package:flutter_app/device_info/flutter_screen_utils.dart';
 
 //定义一个globalKey, 由于GlobalKey要保持全局唯一性，我们使用静态变量存储
 GlobalKey<ScaffoldState> _globalKey = new GlobalKey();
@@ -34,6 +35,8 @@ class RandomWordsState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+     ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
+     print('Device width:${ScreenUtil.screenWidth}'); 
     return new Scaffold(
         appBar: new AppBar(
           title: new Text('首页')
@@ -53,7 +56,10 @@ class RandomWordsState extends State<HomePage> {
           ]),
         SizedBox(height: 1, child:Container(color: Theme.of(context).primaryColor)),
         SizedBox(height: 10),
+
+        
         ],
+
       ),
         );
       

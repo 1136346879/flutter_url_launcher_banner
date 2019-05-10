@@ -3,11 +3,10 @@ import 'package:flutter_app/HomePage.dart';
 import 'package:flutter_app/MinePage.dart';
 import 'package:flutter_app/FunctionPage.dart';
 import 'package:flutter_app/DrawerDetailPager.dart';
-
+import 'package:flutter_app/device_info/main_english.dart' as english;
+import 'package:flutter_app/device_info/main_zh.dart' as zh;
 
 class MainPage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -28,7 +27,7 @@ class MainPageState extends State<MainPageWidget> {
 
   int _tabIndex = 0;
   var tabImages;
-  var appBarTitles = ['首页', '发布', '我的'];
+  var appBarTitles = ['首页', '中文', '英文'];
   /*
    * 存放三个页面，跟fragmentList一样
    */
@@ -87,8 +86,11 @@ class MainPageState extends State<MainPageWidget> {
      */
     _pageList = [
       new HomePage(_globalKey),
-       new HomePage(_globalKey),
-        new HomePage(_globalKey),
+      zh.MyHomePage(title: '设备信息获取'),
+      english.MyHomePage(title: 'DeviceInfos Get'),
+
+      //  new HomePage(_globalKey),
+      // new HomePage(_globalKey),
       // new FunctionPage(),
       // new MinePage(),
     ];

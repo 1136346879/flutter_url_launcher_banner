@@ -45,6 +45,7 @@ class _BannerState extends State<HomeBanner> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Container(
       height: 200.0,
       child: Stack(

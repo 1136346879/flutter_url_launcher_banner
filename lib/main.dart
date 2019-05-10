@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Test',
       // 修改主题颜色
       theme: new ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: Colors.orange,
       ),
       home: MainPage(),
 //      home: new RandomWords(),
