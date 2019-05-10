@@ -87,8 +87,10 @@ class MainPageState extends State<MainPageWidget> {
      */
     _pageList = [
       new HomePage(_globalKey),
-      new FunctionPage(),
-      new MinePage(),
+       new HomePage(_globalKey),
+        new HomePage(_globalKey),
+      // new FunctionPage(),
+      // new MinePage(),
     ];
   }
 
