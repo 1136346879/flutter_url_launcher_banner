@@ -77,7 +77,7 @@ class ScreenUtil {
   setWidth(double width) => width * scaleWidth;
 
   /// 根据设计稿的设备高度适配
-  /// 当发现设计稿中的一屏显示的与当前样式效果不符合时,
+  /// 当发现设计稿中的一屏显示的与当前样式效果不符合时,fl
   /// 或者形状有差异时,高度适配建议使用此方法
   /// 高度适配主要针对想根据设计稿的一屏展示一样的效果
   setHeight(double height) => height * scaleHeight;

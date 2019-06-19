@@ -62,45 +62,25 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Container(
-                  width: ScreenUtil.getInstance().setWidth(375),
-                  height: ScreenUtil.getInstance().setHeight(200),
-                  color: Colors.red,
-                  child: Text(
-                    '我的宽度:${ScreenUtil.getInstance().setWidth(375)}dp',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: ScreenUtil.getInstance().setSp(24),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: ScreenUtil.getInstance().setWidth(375),
-                  height: ScreenUtil.getInstance().setHeight(200),
-                  color: Colors.blue,
-                  child: Text('我的宽度:${ScreenUtil.getInstance().setWidth(375)}dp',
-                      style: TextStyle(
-                        color: Colors.white,
+           
+            Text('设备宽度: ${ScreenUtil.screenWidth}px',
+                 style: TextStyle(
+                        color: Colors.red,
                         fontSize: ScreenUtil.getInstance().setSp(24),
+
                       )),
-                ),
-              ],
-            ),
-            Text('设备宽度:${ScreenUtil.screenWidth}px'),
-            Text('设备高度:${ScreenUtil.screenHeight}px'),
-            Text('设备的像素密度:${ScreenUtil.pixelRatio}'),
-            Text('底部安全区距离:${ScreenUtil.bottomBarHeight}px'),
-            Text('状态栏高度:${ScreenUtil.statusBarHeight}px'),
+            Text('设备高度: ${ScreenUtil.screenHeight}px'),
+            Text('设备的像素密度: ${ScreenUtil.pixelRatio}'),
+            Text('底部安全区距离: ${ScreenUtil.bottomBarHeight}px'),
+            Text('状态栏高度: ${ScreenUtil.statusBarHeight}px'),
             Text(
-              '实际高度的dp与设计稿px的比例:${ScreenUtil.getInstance().scaleHeight}',
+              '实际高度的dp与设计稿px的比例: ${ScreenUtil.getInstance().scaleHeight}',
               textAlign: TextAlign.center,
             ),
             Text(
-              '实际高度的dp与设计稿px的比例:${ScreenUtil.getInstance().scaleHeight}',
+              '实际高度的dp与设计稿px的比例: ${ScreenUtil.getInstance().scaleHeight}',
               textAlign: TextAlign.center,
             ),
             Text(
@@ -111,9 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '高度相对于设计稿放大的比例:${ScreenUtil.getInstance().scaleHeight * ScreenUtil.pixelRatio}',
               textAlign: TextAlign.center,
             ),
-            SizedBox(
-              height: ScreenUtil.getInstance().setHeight(100),
-            ),
+            // SizedBox(
+            //   height: ScreenUtil.getInstance().setHeight(100),
+            // ),
             Text('系统的字体缩放比例:${ScreenUtil.textScaleFactory}'),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,7 +107,46 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize:
                             ScreenUtil(allowFontScaling: true).setSp(24))),
               ],
-            )
+            ),
+
+             Row(
+           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+           
+              children: <Widget>[
+                Container(
+                  
+                  width: ScreenUtil.getInstance().setWidth(750/3),
+                  height: ScreenUtil.getInstance().setHeight(200),
+                  color: Colors.yellow,
+                  child: Text('我的宽度: ${ScreenUtil.getInstance().setWidth(375)}dp',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: ScreenUtil.getInstance().setSp(24),
+                    ),
+                  ),
+                ),
+                Container(
+                width: ScreenUtil.getInstance().setWidth(750/3),
+                  height: ScreenUtil.getInstance().setHeight(200),
+                  color: Colors.orange,
+                  child: Text('我的宽度: ${ScreenUtil.getInstance().setWidth(375)}dp',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: ScreenUtil.getInstance().setSp(24),
+                      )),
+                ),
+                 Container(
+                   width: ScreenUtil.getInstance().setWidth(750/3),
+                  height: ScreenUtil.getInstance().setHeight(200),
+                  color: Colors.green,
+                  child: Text('我的宽度: ${ScreenUtil.getInstance().setWidth(375)}dp',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: ScreenUtil.getInstance().setSp(24),
+                      )),
+                ),
+              ],
+            ),
           ],
         ),
       ),

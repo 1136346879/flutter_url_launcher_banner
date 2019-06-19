@@ -87,9 +87,9 @@ class MainPageState extends State<MainPageWidget> {
     _pageList = [
       new HomePage(_globalKey),
       zh.MyHomePage(title: '设备信息获取'),
-      english.MyHomePage(title: 'DeviceInfos Get'),
+      // english.MyHomePage(title: 'DeviceInfos Get'),
 
-      //  new HomePage(_globalKey),
+       new HomePage(_globalKey),
       // new HomePage(_globalKey),
       // new FunctionPage(),
       // new MinePage(),
